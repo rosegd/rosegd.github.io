@@ -4,35 +4,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이바돔감자탕 서창점 · 리뷰 이벤트</title>
-<meta name="description" content="리뷰 쓰면 뼈 한덩이 혹은 음료수 증정 · 직원에게 리뷰 화면 보여주시면 즉시 드려요">
+<meta name="description" content="리뷰 쓰고 혜택 선택! 뼈 1인분 / 음료 2병 / 소주 1병 / 놀이방 뽑기권 2천원권 2매">
 <style>
   :root{
-    /* 옐로우톤 팔레트 */
-    --bg:#FFFDF3;
-    --card:#ffffff;
-    --text:#222;
-    --accent:#FFC107;   /* amber 500 */
-    --accent2:#FFD54F;  /* amber 300 */
-    --muted:#666;
-    --shadow:0 10px 28px rgba(0,0,0,.08);
-    --r:20px;
-    --pastel:#FFF3BF;   /* 섹션 배경용 파스텔 옐로 */
+    --bg:#FFFDF3; --card:#ffffff; --text:#222;
+    --accent:#FFC107; --accent2:#FFD54F; --muted:#666;
+    --shadow:0 10px 28px rgba(0,0,0,.08); --r:20px;
   }
   *{box-sizing:border-box}
-  body{
-    margin:0; padding:20px;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
-    background:var(--bg); color:var(--text);
-  }
+  body{margin:0;padding:20px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;background:var(--bg);color:var(--text)}
   .wrap{max-width:880px;margin:0 auto}
   header{text-align:center;padding:10px 8px 0}
   .badge{display:inline-block;padding:6px 12px;background:#111;color:#fff;border-radius:999px;font-size:12px}
-  h1{margin:10px 0 12px;font-size:clamp(26px,6vw,38px);color:var(--accent)}
-  .hero{
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:#111; /* 옐로는 가독성 위해 진한 글자 */
-    border-radius:var(--r);box-shadow:var(--shadow);
-    padding:22px 18px;text-align:center;margin:10px 0 16px
+  h1{margin:10px 0 12px;font-size:clamp(28px,6.5vw,40px);color:#C49000}
+  .hero{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#111;border-radius:var(--r);box-shadow:var(--shadow);padding:24px 18px;text-align:center;margin:10px 0 18px}
+  .hero h2{margin:0;font-weight:900;letter-spacing:-.3px;font-size:clamp(22px,6vw,34px)}
+  .hero p{margin:8px 0 0;opacity:.9;font-size:clamp(14px,3.6vw,16px)}
+
+  /* Grid */
+  .grid-2{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+  @media (min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+  .grid-1{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+
+  /* Card + CTA */
+  .card{background:var(--card);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);margin:16px 0}
+  h3{margin:0 0 10px;font-size:clamp(18px,4.6vw,22px);color:#C49000}
+
+  /* BENEFIT CARDS: centered & unified */
+  .cta{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;gap:10px;padding:20px;border-radius:16px;border:1px solid #eee;background:#fff;min-height:140px
   }
-  .hero h2{margin:0;font-size:clamp(20px,5vw,26px)}
-  .hero p{margin:6px 0
+  .txt{display:flex;flex-direction:column;align-items:inherit}
+  .k-title{margin:0;font-weight:900;letter-spacing:-.2px;font-size:clamp(18px,4.8vw,22px)}
+  .k-desc{margin:2px 0 0;color:var(--muted);font-size:clamp(13px,3.6vw,14px);line-height:1.4}
+
+  .ico{width:76px;height:76px;display:flex;align-items:center;justify-content:center;font-size:48px}
+  .ico svg{width:60px;height:60px;display:block}
+
+  .btn{display:inline-block;text-align:center;background:#111;color:#fff;text-decoration:none;padding:14px 16px;border-radius:12px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+  .btn-ghost{display:inline-block;text-align:center;background:#fff;color:#C49000;border:2px solid #FFC107;text-decoration:none;padding:12px 16px;border-radius:12px;font-weight:700}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .btn-row.center{justify-content:center}
+  .btn-row .btn{min-width:220px}
+
+  ol{margin:0;padding-left:20px} li{margin:6px 0;line-height:1.55}
+  .notice{margin:12px auto 0; max-width:680px;background:#fff;border:2px dashed #FFC107;color:#111;border-radius:14px;padding:10px 14px;font-weight:700}
+  footer{margin:16px 0 6px;text-align:center;color:#8a8a8a;font-size:12px}
+
+  /* Centered CTA variant for Naver/Daangn sections */
+  .cta.center{text-align:center;align-items:center}
+  .cta.center .txt{align-items:center}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">오늘 한 끼 맛있게 · 다음은 더 푸짐하게</span>
+      <h1>리뷰 이벤트</h1>
+    </header>
+
+    <!-- 메인 혜택 (4가지 중 택1) -->
+    <section class="hero">
+      <h2>리뷰 쓰고 <strong>혜택</strong>을 선택하세요 (택1)</h2>
+      <p>아래 4가지 중 원하는 항목을 고르실 수 있어요.</p>
+      <div class="grid-2" aria-label="혜택 선택 목록">
+        <div class="cta">
+          <div class="ico" aria-hidden="true">🍖</div>
+          <div class="txt">
+            <p class="k-title">뼈 1인분</p>
+            <p class="k-desc">감자탕 주문 시 사용해 주세요</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div class="ico" aria-hidden="true">🥤</div>
+          <div class="txt">
+            <p class="k-title">음료 2병</p>
+            <p class="k-desc">사이다·콜라 중 택2</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <div class="ico" aria-hidden="true">
+            <!-- 초록 소주병 SVG -->
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2E7D32"/>
+                  <stop offset="100%" stop-color="#1B5E20"/>
+                </linearGradient>
+              </defs>
+              <rect x="28" y="6" width="8" height="12" rx="2" fill="url(#g)"/>
+              <rect x="27" y="2" width="10" height="4" rx="1" fill="#0D3B1E"/>
+              <path d="M20 20h24c2 0 4 2 4 4v4H16v-4c0-2 2-4 4-4z" fill="url(#g)"/>
+              <rect x="16" y="28" width="32" height="26" rx="6" fill="url(#g)"/>
+              <rect x="20" y="34" width="24" height="14" rx="3" fill="#F1F8E9" stroke="#A5D6A7"/>
+            </svg>
+          </div>
+          <div class="txt">
+            <p class="k-title">소주 1병</p>
+            <p class="k-desc">주류는 만 19세 이상 제공</p>
+          </div>
+        </div>
+
+        <div class="cta" style="border:2px dashed #FFC107">
+          <div class="ico" aria-hidden="true">🧸</div>
+          <div class="txt">
+            <p class="k-title">놀이방 뽑기권 2천원권 2매</p>
+            <p class="k-desc">카운터에서 수령</p>
+          </div>
+        </div>
+      </div>
+      <div class="notice">📣 리뷰 작성 후 <u>카운터에서 리뷰 화면을 보여주세요</u>. 확인 즉시 혜택을 드립니다.</div>
+      <p style="margin-top:8px;font-size:12px;opacity:.85">※ 테이블당 1회 · 당일 1회 · 품절 시 동등 혜택 대체 · 주류는 만 19세 이상</p>
+    </section>
+
+    <!-- 네이버 -->
+    <section class="card">
+      <h3>네이버 리뷰 쓰기</h3>
+      <ol>
+        <li>네이버플레이스에서 리뷰 작성</li>
+        <li><b>사진 + 후기 작성</b></li>
+        <li>리뷰 완료 후 카운터에서 화면 보여주기</li>
+      </ol>
+      <div class="grid-1">
+        <div class="cta center">
+          <div class="txt">
+            <p class="k-title">네이버 리뷰 바로가기 (권장)</p>
+            <p class="k-desc">버튼을 눌러 작성 페이지로 이동하세요</p>
+            <div class="btn-row center">
+              <a class="btn" href="https://m.place.naver.com/my/review/new/visit/677fa3797248ef378648653d?redirectTo=MYPLACE_REVIEW_FEED" target="_blank" rel="noopener">네이버 리뷰 쓰기</a>
+              <a class="btn-ghost" href="https://search.naver.com/search.naver?ie=utf8&where=nexearch&query=%EC%9D%B4%EB%B0%94%EB%8F%94%20%EA%B0%90%EC%9E%90%ED%83%95%20%EC%84%9C%EC%B0%BD%EC%A0%90" target="_blank" rel="noopener">네이버 플레이스 열기(백업)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 당근 -->
+    <section class="card">
+      <h3>당근마켓 후기 남기기</h3>
+      <ol>
+        <li>당근마켓 매장 프로필 접속</li>
+        <li><b>사진 + 후기 작성</b> (가능하면)</li>
+        <li>완료 후 카운터에서 화면 보여주기</li>
+      </ol>
+      <div class="grid-1">
+        <div class="cta center">
+          <div class="txt">
+            <p class="k-title">당근 매장 바로가기</p>
+            <p class="k-desc">버튼을 눌러 매장 프로필로 이동하세요</p>
+            <div class="btn-row center">
+              <a class="btn" href="https://www.daangn.com/kr/local-profile/%EC%9D%B4%EB%B0%94%EB%8F%94%EA%B0%90%EC%9E%90%ED%83%95-222iaqk2i1ig/?in=%EC%84%9C%EC%B0%BD%EB%8F%99-6501" target="_blank" rel="noopener">당근 프로필 열기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>이바돔감자탕 서창점 · 리뷰 인증 시 즉시 제공 · 가격/구성은 매장 사정에 따라 변동될 수 있어요</footer>
+  </div>
+</body>
+</html>
