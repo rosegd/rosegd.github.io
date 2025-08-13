@@ -1,0 +1,1 @@
+rosegd.github.io, m.place.naver.com, search.naver.com, naver.com, www.daangn.com, daangn.com, neverssl.com, connectivitycheck.gstatic.com, clients3.google.com, captive.apple.com, msftconnecttest.com, msftncsi.com
