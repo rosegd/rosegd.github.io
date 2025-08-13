@@ -7,9 +7,16 @@
 <meta name="description" content="리뷰 쓰면 뼈 한덩이 혹은 음료수 증정 · 직원에게 리뷰 화면 보여주시면 즉시 드려요">
 <style>
   :root{
-    --bg:#fffef9; --card:#ffffff; --text:#222;
-    --accent:#ff6b00; --accent2:#ffa257; --muted:#666;
-    --shadow:0 10px 28px rgba(0,0,0,.08); --r:20px;
+    /* 옐로우톤 팔레트 */
+    --bg:#FFFDF3;
+    --card:#ffffff;
+    --text:#222;
+    --accent:#FFC107;   /* amber 500 */
+    --accent2:#FFD54F;  /* amber 300 */
+    --muted:#666;
+    --shadow:0 10px 28px rgba(0,0,0,.08);
+    --r:20px;
+    --pastel:#FFF3BF;   /* 섹션 배경용 파스텔 옐로 */
   }
   *{box-sizing:border-box}
   body{
@@ -23,94 +30,9 @@
   h1{margin:10px 0 12px;font-size:clamp(26px,6vw,38px);color:var(--accent)}
   .hero{
     background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:#fff;border-radius:var(--r);box-shadow:var(--shadow);
+    color:#111; /* 옐로는 가독성 위해 진한 글자 */
+    border-radius:var(--r);box-shadow:var(--shadow);
     padding:22px 18px;text-align:center;margin:10px 0 16px
   }
   .hero h2{margin:0;font-size:clamp(20px,5vw,26px)}
-  .hero p{margin:6px 0 0;opacity:.95}
-  .options{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
-  @media (min-width:640px){.options{grid-template-columns:1fr 1fr}}
-  .opt{background:#fff;color:#111;border-radius:16px;padding:16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
-  .opt b{font-size:18px}.opt small{color:#777}
-  .card{background:var(--card);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);margin:16px 0}
-  h3{margin:0 0 10px;font-size:clamp(18px,4.6vw,22px);color:var(--accent)}
-  ol{margin:0;padding-left:20px} li{margin:6px 0;line-height:1.55}
-  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
-  @media (min-width:600px){.grid{grid-template-columns:1fr 1fr}}
-  .cta{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:14px;border-radius:14px;border:1px solid #eee;background:#fff}
-  .cta .txt{display:flex;flex-direction:column}
-  .cta .txt b{font-size:16px}
-  .cta .txt small{color:var(--muted)}
-  .cta img{width:120px;height:120px}
-  .btn{
-    display:inline-block;width:100%;text-align:center;background:#111;color:#fff;
-    text-decoration:none;padding:14px 16px;border-radius:12px;font-weight:700;
-    box-shadow:0 6px 16px rgba(0,0,0,.15)
-  }
-  .note{text-align:center;color:#777;font-size:12px;margin:8px 0}
-  footer{margin:16px 0 6px;text-align:center;color:#8a8a8a;font-size:12px}
-</style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <span class="badge">오늘 한 끼 맛있게 · 다음은 더 푸짐하게</span>
-      <h1>📱 리뷰 이벤트</h1>
-    </header>
-
-    <section class="hero">
-      <h2>리뷰 쓰면 <strong>뼈 한덩이</strong> 혹은 <strong>음료수</strong> 증정</h2>
-      <p>직원에게 리뷰 화면 보여주시면 즉시 드려요</p>
-      <div class="options">
-        <div class="opt"><div>🍖</div><div><b>뼈 한덩이 추가</b><br><small>감자탕/등뼈 메뉴 주문 시</small></div></div>
-        <div class="opt"><div>🥤</div><div><b>음료수 1캔</b><br><small>사이다·콜라 중 택1</small></div></div>
-      </div>
-      <div class="note">※ 1회 방문 1회 적용 · 재고 소진 시 동등 혜택으로 대체</div>
-    </section>
-
-    <section class="card">
-      <h3>네이버 리뷰 이벤트</h3>
-      <ol>
-        <li>네이버플레이스에서 리뷰 작성</li>
-        <li>★별점 + 사진 1장 + 한 줄 후기</li>
-        <li>직원에게 리뷰 화면 보여주기</li>
-      </ol>
-      <div class="grid">
-        <div class="cta">
-          <div class="txt">
-            <b>네이버 리뷰 바로가기</b>
-            <small>터치하면 작성 페이지로 이동합니다</small>
-            <a class="btn" href="https://m.place.naver.com/my/review/new/visit/677fa3797248ef378648653d?redirectTo=MYPLACE_REVIEW_FEED" target="_blank" rel="noopener">네이버 리뷰 쓰기</a>
-          </div>
-          <a href="https://m.place.naver.com/my/review/new/visit/677fa3797248ef378648653d?redirectTo=MYPLACE_REVIEW_FEED" target="_blank" rel="noopener">
-            <img alt="네이버 리뷰 QR" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fm.place.naver.com%2Fmy%2Freview%2Fnew%2Fvisit%2F677fa3797248ef378648653d%3FredirectTo%3DMYPLACE_REVIEW_FEED">
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h3>당근마켓 리뷰 이벤트</h3>
-      <ol>
-        <li>당근마켓 매장 프로필 접속</li>
-        <li>게시글/댓글로 이용후기 남기기</li>
-        <li>직원 확인 후 혜택 제공</li>
-      </ol>
-      <div class="grid">
-        <div class="cta">
-          <div class="txt">
-            <b>당근 매장 바로가기</b>
-            <small>터치하면 매장 프로필로 이동합니다</small>
-            <a class="btn" href="https://www.daangn.com/kr/local-profile/%EC%9D%B4%EB%B0%94%EB%8F%94%EA%B0%90%EC%9E%90%ED%83%95-222iaqk2i1ig/?in=%EC%84%9C%EC%B0%BD%EB%8F%99-6501" target="_blank" rel="noopener">당근 프로필 열기</a>
-          </div>
-          <a href="https://www.daangn.com/kr/local-profile/%EC%9D%B4%EB%B0%94%EB%8F%94%EA%B0%90%EC%9E%90%ED%83%95-222iaqk2i1ig/?in=%EC%84%9C%EC%B0%BD%EB%8F%99-6501" target="_blank" rel="noopener">
-            <img alt="당근 QR" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fwww.daangn.com%2Fkr%2Flocal-profile%2F%25EC%259D%25B4%25EB%25B0%2594%25EB%258F%2594%25EA%25B0%2590%25EC%259E%2590%25ED%2583%2595-222iaqk2i1ig%2F%3Fin%3D%25EC%2584%259C%25EC%25B0%25BD%25EB%258F%2599-6501">
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer>이바돔감자탕 서창점 · 리뷰 인증 시 즉시 제공</footer>
-  </div>
-</body>
-</html>
+  .hero p{margin:6px 0
